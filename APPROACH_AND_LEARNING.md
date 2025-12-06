@@ -567,5 +567,3 @@ The project demonstrates that even complex AI/ML pipelines benefit from traditio
 
 ---
 
-*Document created: December 2025*  
-*Project: IntentMiner - Intent Expansion Pipeline*
