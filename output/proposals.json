@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-03T16:57:51.652083",
+    "total_messages_analyzed": 200,
+    "new_intents_proposed": 4,
+    "proposals_rejected": 0
+  },
+  "proposed_intents": [
+    {
+      "type": "new_secondary",
+      "parent_primary_id": "logistics",
+      "parent_secondary_id": "order_status",
+      "name": "Order Tracking",
+      "id": "order_tracking",
+      "description": "When customers specifically want to track their order or need tracking information/instructions.",
+      "evidence": {
+        "message_count": 9,
+        "parent_total_count": 43,
+        "percentage": "20.9%",
+        "key_phrases": [
+          "how to track order",
+          "track order",
+          "tracking"
+        ],
+        "sample_messages": [
+          "how to track order?",
+          "mera order confirm ho gaya hai"
+        ],
+        "rationale": "Separating tracking requests from general status inquiries allows for specialized responses - tracking requests need specific tracking links, order numbers, or tracking instructions, while status inquiries may need broader order information or explanations about delays/processing."
+      },
+      "quality_score": 0.8
+    },
+    {
+      "type": "new_secondary",
+      "parent_primary_id": "specific_product",
+      "parent_secondary_id": "product_info",
+      "name": "Usage Instructions",
+      "id": "usage_instructions",
+      "description": "When customers specifically ask for instructions on how to use, apply, or operate a product",
+      "evidence": {
+        "message_count": 8,
+        "parent_total_count": 41,
+        "percentage": "19.5%",
+        "key_phrases": [
+          "how to use",
+          "how to used",
+          "how will i apply",
+          "how to apply",
+          "kaise use kare",
+          "use it in daily routine"
+        ],
+        "sample_messages": [
+          "others details",
+          "before use serum oil can be applied"
+        ],
+        "rationale": "Separating usage queries from general product info allows for targeted responses with step-by-step instructions, application methods, and practical guidance rather than broad product details"
+      },
+      "quality_score": 0.8
+    },
+    {
+      "type": "new_secondary",
+      "parent_primary_id": "specific_product",
+      "parent_secondary_id": "product_speciality_uc",
+      "name": "Product Benefits Inquiry",
+      "id": "product_benefits_inquiry",
+      "description": "When customer specifically asks about the benefits, results, or what makes a product special/effective",
+      "evidence": {
+        "message_count": 11,
+        "parent_total_count": 24,
+        "percentage": "45.8%",
+        "key_phrases": [
+          "what's special about it?",
+          "specialty",
+          "benefits",
+          "results"
+        ],
+        "sample_messages": [
+          "what's special about it? ultra smoothing shampoo for smooth & shiny hair- 250ml",
+          "seee results"
+        ],
+        "rationale": "Benefits-focused queries require responses emphasizing outcomes and value propositions, while general specialty questions may cover features, uniqueness, or technical specifications - this distinction enables more targeted and persuasive responses"
+      },
+      "quality_score": 0.8
+    },
+    {
+      "type": "new_secondary",
+      "parent_primary_id": "recommendation",
+      "parent_secondary_id": "seeking_solution",
+      "name": "Hair Care Recommendations",
+      "id": "hair_care_recommendations",
+      "description": "When customer seeks product recommendations specifically for hair-related concerns including growth, loss, scalp health, or hair care routines",
+      "evidence": {
+        "message_count": 6,
+        "parent_total_count": 10,
+        "percentage": "60.0%",
+        "key_phrases": [
+          "hair growth",
+          "shampoo",
+          "hair oil",
+          "baldness",
+          "baby hair growth",
+          "rosemary and hibiscus",
+          "customized shampoo"
+        ],
+        "sample_messages": [
+          "which facewash is good for brighter face",
+          "my lips like in two tone give me your best product"
+        ],
+        "rationale": "Hair care has unique product categories (shampoos, oils, treatments), different ingredient considerations, and specialized concerns that benefit from targeted responses separate from general skincare recommendations"
+      },
+      "quality_score": 0.8
+    }
+  ],
+  "rejected_proposals": []
+}

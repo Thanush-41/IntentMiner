@@ -1,0 +1,114 @@
+# IntentMiner - Configuration File
+# ================================
+# Production-ready configuration for Intent Expansion Pipeline
+
+# Thresholds & Constraints
+thresholds:
+  # Minimum messages required to propose a new intent
+  min_support_absolute: 10              # At least 10 messages
+  min_support_relative: 0.05            # OR 5% of its parent category
+  
+  # Semantic distinctiveness (0-1 scale)
+  semantic_distinctiveness_threshold: 0.6
+  
+  # Max splits per secondary intent (prevent over-fragmentation)
+  max_patterns_per_category: 3
+  
+  # Hard cap on total new intents per analysis
+  max_total_proposals: 15
+
+# LLM Configuration
+llm:
+  # Provider: "openai" | "anthropic" | "gemini"
+  provider: "openai"
+  
+  # Model choice (optimize for cost + performance)
+  model: "gpt-4o-mini"
+  # Alternative: "claude-3-haiku" | "gemini-2.0-flash"
+  
+  # Temperature (0 = deterministic, 1 = creative)
+  temperature: 0.3
+  
+  # Batch size for processing messages
+  batch_size: 50
+  
+  # Timeout per LLM call (seconds)
+  timeout: 30
+  
+  # Retry attempts for failed calls
+  max_retries: 3
+
+# Text Processing
+processing:
+  # Normalize text (lowercase, strip, remove extra whitespace)
+  normalize_text: true
+  
+  # Remove duplicate messages
+  remove_duplicates: true
+  
+  # Auto-detect message language
+  detect_language: true
+  
+  # How to handle non-English: "skip" | "translate" | "include"
+  handle_non_english: "skip"
+  
+  # Minimum word count to consider a message
+  min_message_length: 3
+
+# Quality Scoring Weights
+quality_scoring:
+  # How much weight to give message volume evidence (0-1)
+  weight_support: 0.3
+  
+  # How much weight to give semantic distinctness (0-1)
+  weight_distinctiveness: 0.4
+  
+  # How much weight to give definition clarity (0-1)
+  weight_clarity: 0.3
+
+# Guardrails
+guardrails:
+  # Prevent over-fragmentation of similar concepts
+  prevent_over_fragmentation: true
+  
+  # Check for terminology redundancy with existing intents
+  check_terminology_redundancy: true
+  
+  # Max similar keywords allowed before rejecting (prevent "ingredients" vs "components" vs "material")
+  max_similar_keywords: 2
+  
+  # Check for circular/redundant definitions
+  check_circular_definitions: true
+  
+  # Enforce naming consistency with existing intents
+  enforce_style_consistency: true
+
+# Output Configuration
+output:
+  # Output directory
+  output_dir: "./output/"
+  
+  # Generate proposals.json
+  save_proposals_json: true
+  
+  # Generate ANALYSIS_REPORT.md
+  generate_report_md: true
+  
+  # Generate visualizations/metrics
+  generate_visualizations: true
+  
+  # Logging level: "DEBUG" | "INFO" | "WARNING" | "ERROR"
+  log_level: "INFO"
+
+# ============================================================================
+# ENVIRONMENT VARIABLES REQUIRED
+# ============================================================================
+# Create a .env file in the project root:
+#
+# OPENAI_API_KEY=sk-...
+# # OR
+# ANTHROPIC_API_KEY=sk-ant-...
+# # OR
+# GEMINI_API_KEY=...
+#
+# ============================================================================

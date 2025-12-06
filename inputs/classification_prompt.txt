@@ -1,0 +1,27 @@
+You will be provided with the full conversational context between a customer and an agent, including previous messages. The company <company_name> which provide <company_description>.
+Classify each message into a primary category and a secondary category. Provide your output in the following JSON format:
+{{
+  "primary": "<Primary Category>",
+  "secondary": "<Secondary Category>"
+}}
+
+IMPORTANT: Each secondary category MUST ONLY be paired with its corresponding primary category as defined below. DO NOT mix secondary categories with unrelated primary categories.
+
+{use_cases}
+
+Remember: The secondary category must ONLY belong to the chosen primary category. NEVER assign a secondary category from one primary group to another. Strictly follow the allowed mappings below.
+
+Important Note:
+- Always classify based on the root issue from the entire conversation history, not just the latest customer message. If the new message is only sharing order details, the classification must remain tied to the original problem (e.g., missing product → Wrong/Damaged Order).
+
+- The Marked Delivered, Not Received use case is only applicable when the customer reports that the tracking/portal shows their order as 'delivered,' but they have not actually received the package. For other delivery related issues the secondary category should be Order Status.
+
+- The Basic Interactions use case is only applicable when the customer gives greetings and acknowledgment **only**.
+
+- If the customer combines a greeting/acknowledgment with a question (e.g., "Hi, how can I track my order?"), the classification must remain tied to the original problem (e.g., tracking order → Order Status).
+
+Strictly follow the allowed mappings below:
+Ongoing Conversation:
+Conversation History: {history}
+Customer New Message: {message}
+Attributes for the above Message:

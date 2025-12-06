@@ -1,0 +1,48 @@
+{
+  "classification": {
+    "total_classified": 200,
+    "certain_classifications": 200,
+    "uncertain_classifications": 0,
+    "error_classifications": 0,
+    "certainty_rate": "100.0%",
+    "uncertainty_rate": "0.0%"
+  },
+  "coverage": {
+    "primary_intents_defined": 5,
+    "primary_intents_used": 5,
+    "primary_coverage": "100.0%",
+    "secondary_intents_defined": 35,
+    "secondary_intents_used": 26,
+    "secondary_coverage": "74.3%",
+    "unique_intent_pairs": 27
+  },
+  "distribution": {
+    "largest_group_size": 43,
+    "smallest_group_size": 1,
+    "average_group_size": "7.4",
+    "gini_coefficient": "0.611",
+    "entropy": "3.728",
+    "top_3_intents_share": "54.0%"
+  },
+  "pattern_discovery": {
+    "groups_analyzed": 9,
+    "groups_with_patterns": 6,
+    "total_patterns_found": 6,
+    "pattern_discovery_rate": "22.2%"
+  },
+  "proposal_quality": {
+    "proposals_generated": 4,
+    "avg_evidence_count": "8.5",
+    "avg_evidence_percentage": "36.5%",
+    "proposals_per_100_messages": "2.00"
+  },
+  "overall_score": {
+    "classification_score": 25,
+    "coverage_score": 14.86,
+    "distribution_score": 5.835,
+    "pattern_score": 8.88,
+    "proposal_score": 16,
+    "total": 70.575,
+    "grade": "B"
+  }
+}
