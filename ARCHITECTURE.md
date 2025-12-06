@@ -1034,12 +1034,4 @@ exported-assets/
 
 ---
 
-## License & Credits
 
-**Project:** IntentMiner  
-**Version:** 1.0.0  
-**Purpose:** AI Workflow Analysis for Intent Discovery
-
----
-
-*Generated: December 2025*
