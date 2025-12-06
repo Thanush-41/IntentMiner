@@ -1,6 +1,6 @@
 # IntentMiner
 
-🎯 **A production-grade pipeline to discover and propose missing intents in conversational AI systems.**
+ **A production-grade pipeline to discover and propose missing intents in conversational AI systems.**
 
 ## Overview
 
@@ -68,6 +68,3 @@ IntentMiner/
     └── METRICS_REPORT.md
 ```
 
-## License
-
-MIT
